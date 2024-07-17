@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind Css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Scripts & Css -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- SwiperJs Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- StyleSheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Focal</title>
 </head>
 <body>
     <header class="flex justify-between items-center px-16 py-6 bg-[#292929] text-white">
+        <!-- Mobile Menu -->
         <div class="lg:hidden">
             <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <img class="size-25" src="./nav.png">
@@ -34,13 +41,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- Logo -->
         <div><h1 class="text-4xl font-extrabold cursor-default m-0">FOCAL</h1></div>
+        
+        <!-- Desktop Menu -->
         <ul id="header-menu" class=" flex gap-7 text-md font-medium	cursor-pointer p-0 m-0 max-lg:hidden">
             <li class="header-menu-link"> <p class="header-menu-link-active relative p-0 m-0">Shop by Category</p> </li>
             <li class="header-menu-link"> <p class="header-menu-link-active relative p-0 m-0">Shop by Device</p> </li>
             <li class="header-menu-link"> <p class="header-menu-link-active relative p-0 m-0">Coolections</p> </li>
             <li class="header-menu-link"> <p class="header-menu-link-active relative p-0 m-0">Blog</p> </li>
         </ul>
+
+        <!-- Icons -->
         <div id="header-icons" class="flex gap-4 cursor-pointer">
             <span class="max-md:hidden">
                 <svg focusable="false" width="20" height="16" class="icon icon--header-email   " viewBox="0 0 20 16">
@@ -68,11 +81,53 @@
             </span>
         </div>
     </header>
-    
-    <main id="image-slider-container">
-        <div id="image-silder">
 
+    <!-- Main Container -->
+    <main id="image-slider-container" style="height: 90vh">
+        <!-- Swiper Container -->
+        <div class="swiper swiperOne" autoplay="true" style="height: 90vh">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-full-image" style="background-image: url('./images/1.jpg');"></div>
+                </div>
+                <div class="swiper-slide flex-slider-images min-lg:flex-row max-md:flex-col">
+                    <div class="slider-half-image" style="background-image: url('./images/2-1.jpg');"></div>
+                    <div class="slider-half-image" style="background-image: url('./images/2-2.jpg');"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-full-image" style="background-image: url('./images/3.jpg');"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-full-image" style="background-image: url('./images/4.jpg');"></div>
+                </div>
+                <div class="swiper-slide flex-slider-images min-lg:flex-row max-md:flex-col">
+                    <div class="slider-half-image" style="background-image: url('./images/5-1.jpg');"></div>
+                    <div class="slider-half-image" style="background-image: url('./images/5-2.jpg');"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination flex justify-center items-center gap-4">
+            <span class="swiper-pagination-span-backgroud">
+                <span class="swiper-pagination-span"></span>
+            </span>
+            <span class="swiper-pagination-span-backgroud">
+                <span class="swiper-pagination-span"></span>
+            </span>
+            <span class="swiper-pagination-span-backgroud">
+                <span class="swiper-pagination-span"></span>
+            </span>
+            <span class="swiper-pagination-span-backgroud">
+                <span class="swiper-pagination-span"></span>
+            </span>
+            <span class="swiper-pagination-span-backgroud">
+                <span class="swiper-pagination-span"></span>
+            </span>
         </div>
     </main>
+
+    <!-- SwiperJs Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html> 
